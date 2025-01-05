@@ -1,9 +1,8 @@
-[gd_scene load_steps=5 format=4 uid="uid://dt0t5u6xx85yc"]
+[gd_scene load_steps=4 format=4 uid="uid://dt0t5u6xx85yc"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_slnsu"]
 [ext_resource type="TileSet" uid="uid://bawg2sfxgyuug" path="res://blocks.tres" id="2_jh2l2"]
 [ext_resource type="Script" path="res://scripts/tml_buildings.gd" id="3_sto6c"]
-[ext_resource type="Script" path="res://scripts/town_data.gd" id="4_lw58c"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_slnsu")
@@ -13,10 +12,8 @@ tile_map_data = PackedByteArray("AAAAAP//AQADAAAAAAABAP//AQADAAAAAAACAP//AQADAAA
 tile_set = ExtResource("2_jh2l2")
 
 [node name="TML_Buildings" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAABAP//AQABAAEAAAAAAP7/AQABAAEAAAABAP7/AQADAAEAAAA=")
 tile_set = ExtResource("2_jh2l2")
 script = ExtResource("3_sto6c")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-
-[node name="TownData" type="Node" parent="."]
-script = ExtResource("4_lw58c")
