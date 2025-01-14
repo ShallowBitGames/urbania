@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://c6honepwu6587"]
+
+[ext_resource type="Script" path="res://resources/cardData.gd" id="1_g2hl6"]
+
+[resource]
+script = ExtResource("1_g2hl6")
+name = "Library"
+radius = 2
+qol = 2.0
+attr = 1.0
+sprite_path = "res://test-pngs/testcard-library.png"
+modifiers = {
+"LI": 2.0,
+"MIXED": 1.0,
+"SFH": 2.0,
+"STUDENT": 1.0,
+"TREND": 1.0,
+"WEALTH": 0.5
+}

@@ -26,16 +26,11 @@ script = ExtResource("3_sto6c")
 script = ExtResource("4_6yttl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CardArea"]
-position = Vector2(0, 187)
+position = Vector2(0, 301)
 shape = SubResource("RectangleShape2D_w0y2n")
 
-[node name="Card" parent="CardArea/CollisionShape2D" instance=ExtResource("5_rjeer")]
-position = Vector2(-195, -1)
-
-[node name="Card2" parent="CardArea/CollisionShape2D" instance=ExtResource("5_rjeer")]
-
-[node name="Card3" parent="CardArea/CollisionShape2D" instance=ExtResource("5_rjeer")]
-position = Vector2(193, -1)
+[node name="Card" parent="CardArea" instance=ExtResource("5_rjeer")]
+position = Vector2(-2, 304)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="CardData" load_steps=2 format=3 uid="uid://bk8q4g6r16vsd"]
+
+[ext_resource type="Script" path="res://resources/cardData.gd" id="1_iark7"]
+
+[resource]
+script = ExtResource("1_iark7")
+name = "Clinic"
+radius = 5
+qol = 5.0
+attr = 0.0
+sprite_path = "res://test-pngs/testcard-clinic.png"
+modifiers = {
+"LI": 1.0,
+"MIXED": 1.0,
+"SFH": 1.0,
+"STUDENT": 1.0,
+"TREND": 1.0,
+"WEALTH": 1.0
+}

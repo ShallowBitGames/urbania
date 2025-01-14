@@ -1,11 +1,15 @@
-extends Node2D
+extends Node
 
 enum Block {NONE, MIXED, TRENDY, FAMILY, WEALTHY, POOR, TOURIST}
+
+enum Card {CLINIC, LIBRARY, PARK}
 
 const BLOCK_TYPE = "blocktype"
 const POPULATION = "population"
 
 var tile_data : Array
+
+var deck = [Card.CLINIC, Card.LIBRARY, Card.PARK, Card.PARK, Card.PARK, Card.PARK]
 
 var block_atlas = {
 	Block.MIXED: Vector2i(0,1),
@@ -17,6 +21,8 @@ var block_atlas = {
 }
 
 const spread_threshold = 80;
+
+var hand : Array
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,6 +38,20 @@ func _ready() -> void:
 	build_block(Vector2i(0,-1), Block.MIXED, 100)
 	build_block(Vector2i(0,0), Block.TRENDY, 215)
 #	print(tile_data)
+	
+	var card_clinic = load("res://resources/cards/clinic.tres")
+	var card_library = load("res://resources/cards/library.tres")
+	var card_park = load("res://resources/cards/park.tres")
+	 
+	#$Card.set_sprite(sprite_path)
+	$CardArea/CollisionShape2D/Card.set_sprite(card_clinic.sprite_path)
+	$CardArea/CollisionShape2D/Card2.set_sprite(card_library.sprite_path)
+	$CardArea/CollisionShape2D/Card3.set_sprite(card_park.sprite_path)
+	
+	#hand = []
+	#draw_stone()
+	#draw_stone()
+	#draw_stone()
 
 
 func getPopulation(coords: Vector2i):
@@ -50,23 +70,27 @@ func setType(coords: Vector2i, type):
 	tile_data[coords.x][coords.y][BLOCK_TYPE] = type
 
 func _input(event):
+	
 	if event.is_action_released("left_click"):
 		var clicked_cell = $TML_Base.local_to_map($TML_Base.get_local_mouse_position())
 		var position = base_to_build(clicked_cell)
+		
 		if !inside_boundaries(position):
-			print("outside bounds")
+			pass
+	#		print("outside bounds")
 			
 		elif $TML_Buildings.get_cell_tile_data(position):
 			print("population:")
 			print(getPopulation(position))
+			spread_block(position)
 		
-		elif !is_buildable(position):
-			print("can't build here")
+	#	elif !is_buildable(position):
+	#		print("can't build here")
 		
 		else:	
 			build_block(position,Block.MIXED,100)
 		
-		spread_blocks()
+	#	spread_blocks()
 
 func spread_blocks():
 	var block_positions = $TML_Buildings.get_used_cells()
@@ -124,9 +148,12 @@ func spread_block(position: Vector2i) -> bool:
 	# get free space with maximum attractiveness
 	# create new block of same type and 20% population
 	build_block(surrounding[0], type, population)
-	
+	 
 	return true
 
+func draw_stone():
+	
+	pass
 
 #func pass_turn():
 	# draw cards
