@@ -43,10 +43,9 @@ func _ready() -> void:
 	var card_library = load("res://resources/cards/library.tres")
 	var card_park = load("res://resources/cards/park.tres")
 	 
-	#$Card.set_sprite(sprite_path)
-	$CardArea/CollisionShape2D/Card.set_sprite(card_clinic.sprite_path)
-	$CardArea/CollisionShape2D/Card2.set_sprite(card_library.sprite_path)
-	$CardArea/CollisionShape2D/Card3.set_sprite(card_park.sprite_path)
+	$CardArea/CollisionShape2D/Card.set_data(card_clinic)
+	$CardArea/CollisionShape2D/Card2.set_data(card_library)
+	$CardArea/CollisionShape2D/Card3.set_data(card_park)
 	
 	#hand = []
 	#draw_stone()

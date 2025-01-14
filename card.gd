@@ -3,10 +3,15 @@ class_name Card
 
 const ATTRIBUTES = preload("res://resources/cardData.gd")
 
-var attributes
+var attributes : CardData
 
-func set_sprite(path: String) -> void:
-	var image = Image.load_from_file(path)
+func _input_event(viewport: Viewport, event: InputEvent, shape_idx: int) -> void:
+	if event.is_action_pressed("left_click"):
+		print("Clicked card: " + attributes.name)
+
+func set_data(resource: CardData):
+	attributes = resource
+	var image = Image.load_from_file(attributes.sprite_path)
 	$Sprite.texture = ImageTexture.create_from_image(image)
 
 # Called when the node enters the scene tree for the first time.
