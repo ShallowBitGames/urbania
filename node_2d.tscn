@@ -1,13 +1,10 @@
-[gd_scene load_steps=7 format=4 uid="uid://dt0t5u6xx85yc"]
+[gd_scene load_steps=6 format=4 uid="uid://dt0t5u6xx85yc"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_slnsu"]
 [ext_resource type="TileSet" uid="uid://bawg2sfxgyuug" path="res://blocks.tres" id="2_jh2l2"]
 [ext_resource type="Script" path="res://scripts/tml_buildings.gd" id="3_sto6c"]
 [ext_resource type="Script" path="res://scripts/hand.gd" id="4_6yttl"]
 [ext_resource type="PackedScene" uid="uid://cq5x4m5ent2a" path="res://card.tscn" id="5_rjeer"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w0y2n"]
-size = Vector2(693, 246)
 
 [node name="Game" type="Node"]
 script = ExtResource("1_slnsu")
@@ -22,20 +19,17 @@ script = ExtResource("3_sto6c")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CardArea" type="Area2D" parent="."]
+[node name="Hand" type="Node" parent="."]
 script = ExtResource("4_6yttl")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CardArea"]
+[node name="Card" parent="Hand" instance=ExtResource("5_rjeer")]
+position = Vector2(-195, 186)
+
+[node name="Card2" parent="Hand" instance=ExtResource("5_rjeer")]
 position = Vector2(0, 187)
-shape = SubResource("RectangleShape2D_w0y2n")
 
-[node name="Card" parent="CardArea/CollisionShape2D" instance=ExtResource("5_rjeer")]
-position = Vector2(-195, -1)
-
-[node name="Card2" parent="CardArea/CollisionShape2D" instance=ExtResource("5_rjeer")]
-
-[node name="Card3" parent="CardArea/CollisionShape2D" instance=ExtResource("5_rjeer")]
-position = Vector2(193, -1)
+[node name="Card3" parent="Hand" instance=ExtResource("5_rjeer")]
+position = Vector2(193, 186)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

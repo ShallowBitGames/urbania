@@ -39,13 +39,11 @@ func _ready() -> void:
 	build_block(Vector2i(0,0), Block.TRENDY, 215)
 #	print(tile_data)
 	
-	var card_clinic = load("res://resources/cards/clinic.tres")
-	var card_library = load("res://resources/cards/library.tres")
-	var card_park = load("res://resources/cards/park.tres")
-	 
-	$CardArea/CollisionShape2D/Card.set_data(card_clinic)
-	$CardArea/CollisionShape2D/Card2.set_data(card_library)
-	$CardArea/CollisionShape2D/Card3.set_data(card_park)
+	$Hand.addCard("res://resources/cards/clinic.tres")
+	$Hand.addCard("res://resources/cards/library.tres")
+	$Hand.addCard("res://resources/cards/park.tres")
+	
+	
 	
 	#hand = []
 	#draw_stone()
