@@ -22,7 +22,7 @@ var block_atlas = {
 
 const spread_threshold = 80;
 
-var hand : Array
+@onready var hand = $Hand
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -38,11 +38,6 @@ func _ready() -> void:
 	build_block(Vector2i(0,-1), Block.MIXED, 100)
 	build_block(Vector2i(0,0), Block.TRENDY, 215)
 #	print(tile_data)
-	
-	$Hand.addCard("res://resources/cards/clinic.tres")
-	$Hand.addCard("res://resources/cards/library.tres")
-	$Hand.addCard("res://resources/cards/park.tres")
-	
 	
 	
 	#hand = []
@@ -96,6 +91,9 @@ func spread_blocks():
 		if getPopulation(coord) >= spread_threshold:
 			spread_block(coord)
 
+func pass_turn():
+	spread_blocks()
+	draw_card()
 
 func base_to_build(coordinates: Vector2i) -> Vector2i:
 	return Vector2i(coordinates[0]-1, coordinates[1]-1)
@@ -148,9 +146,15 @@ func spread_block(position: Vector2i) -> bool:
 	 
 	return true
 
-func draw_stone():
-	
-	pass
+func draw_card():
+	if hand.card_count() == 0:
+		hand.add_card("LIBRARY")
+	elif hand.card_count() == 1: 
+		hand.add_card("CLINIC")
+	elif hand.card_count() ==2:
+		hand.add_card("PARK")
+	else:
+		return
 
 #func pass_turn():
 	# draw cards
@@ -163,3 +167,12 @@ func draw_stone():
 #	spread_blocks()
 	
 	# recalculate?
+
+
+func _on_btn_draw_pressed() -> void:
+	draw_card()
+
+
+
+func _on_btn_turn_pressed() -> void:
+	pass_turn()

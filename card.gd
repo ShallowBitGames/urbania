@@ -14,6 +14,9 @@ func set_data(resource: CardData):
 	var image = Image.load_from_file(attributes.sprite_path)
 	$Sprite.texture = ImageTexture.create_from_image(image)
 
+func is_empty():
+	return attributes == null
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

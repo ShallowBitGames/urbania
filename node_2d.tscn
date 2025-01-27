@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://dt0t5u6xx85yc"]
+[gd_scene load_steps=5 format=4 uid="uid://dt0t5u6xx85yc"]
 
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_slnsu"]
 [ext_resource type="TileSet" uid="uid://bawg2sfxgyuug" path="res://blocks.tres" id="2_jh2l2"]
 [ext_resource type="Script" path="res://scripts/tml_buildings.gd" id="3_sto6c"]
 [ext_resource type="Script" path="res://scripts/hand.gd" id="4_6yttl"]
-[ext_resource type="PackedScene" uid="uid://cq5x4m5ent2a" path="res://card.tscn" id="5_rjeer"]
 
 [node name="Game" type="Node"]
 script = ExtResource("1_slnsu")
@@ -22,17 +21,21 @@ script = ExtResource("3_sto6c")
 [node name="Hand" type="Node" parent="."]
 script = ExtResource("4_6yttl")
 
-[node name="Card" parent="Hand" instance=ExtResource("5_rjeer")]
-position = Vector2(-195, 186)
+[node name="TestButtons" type="CanvasLayer" parent="."]
 
-[node name="Card2" parent="Hand" instance=ExtResource("5_rjeer")]
-position = Vector2(0, 187)
+[node name="btn_turn" type="Button" parent="TestButtons"]
+offset_left = 364.0
+offset_top = 218.0
+offset_right = 495.0
+offset_bottom = 271.0
+text = "TURN"
 
-[node name="Card3" parent="Hand" instance=ExtResource("5_rjeer")]
-position = Vector2(193, 186)
+[node name="btn_draw" type="Button" parent="TestButtons"]
+offset_left = 363.0
+offset_top = 150.0
+offset_right = 494.0
+offset_bottom = 203.0
+text = "DRAW"
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Hand" type="HBoxContainer" parent="CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
+[connection signal="pressed" from="TestButtons/btn_turn" to="." method="_on_btn_turn_pressed"]
+[connection signal="pressed" from="TestButtons/btn_draw" to="." method="_on_btn_draw_pressed"]
