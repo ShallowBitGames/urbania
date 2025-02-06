@@ -61,6 +61,7 @@ func setPopulation(coords: Vector2i, population: int):
 func setType(coords: Vector2i, type):
 	tile_data[coords.x][coords.y][BLOCK_TYPE] = type
 
+
 func _input(event):
 	
 	if event.is_action_released("left_click"):
@@ -76,13 +77,14 @@ func _input(event):
 			print(getPopulation(position))
 			spread_block(position)
 		
-	#	elif !is_buildable(position):
-	#		print("can't build here")
+		elif !is_buildable(position):
+			print("can't build here")
 		
 		else:	
 			build_block(position,Block.MIXED,100)
 		
-	#	spread_blocks()
+#		spread_blocks()
+
 
 func spread_blocks():
 	var block_positions = $TML_Buildings.get_used_cells()

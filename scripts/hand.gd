@@ -1,5 +1,7 @@
 class_name Hand extends Node
 
+signal card_selected(card)
+
 var card_data = {
 	"CLINIC": "res://resources/cards/clinic.tres",
 	"LIBRARY": "res://resources/cards/library.tres",
@@ -8,8 +10,8 @@ var card_data = {
 
 var slots = [
 	{"position" : Vector2i(0, 200), "free" : true},
-	{"position" : Vector2i(-200, 200), "free" : true},
-	{"position" : Vector2i(200, 200), "free" : true}]
+	{"position" : Vector2i(-175, 200), "free" : true},
+	{"position" : Vector2i(175, 200), "free" : true}]
 
 var card_deck = []
 
@@ -38,7 +40,9 @@ func add_card(cardID):
 	for s in slots:
 		if s["free"]:
 			add_child(card)
-			card.set_position(s["position"])
+			var lower_pos = s["position"]
+			var upper_pos = Vector2i(lower_pos.x, lower_pos.y - 30)
+			card.set_positions(lower_pos, upper_pos)
 			s["free"] = false
 			break
 
@@ -51,3 +55,17 @@ func card_count():
 
 func remove_card(cardID):
 	pass
+
+
+# 'clicked' here is selected -> should be raised, all others lowers
+func card_clicked(clicked_card):
+	card_selected.emit(clicked_card)
+	
+	for c in get_children():
+		if c != clicked_card:
+			c.unselect()
+
+func get_selected_card():
+	for c in get_children():
+		if c.selected:
+			return c
