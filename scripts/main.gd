@@ -80,11 +80,15 @@ func _input(event):
 		elif !is_buildable(position):
 			print("can't build here")
 		
-		else:	
-			build_block(position,Block.MIXED,100)
+		
+		else:
+			if $Hand.get_selected_card():
+				var card = $Hand.get_selected_card()
+				build_from_card(card, position)
+			else:
+				build_block(position,Block.MIXED,100)
 		
 #		spread_blocks()
-
 
 func spread_blocks():
 	var block_positions = $TML_Buildings.get_used_cells()
@@ -119,6 +123,9 @@ func build_block(coords: Vector2i, type, population: int):
 	setPopulation(coords, population)
 	setType(coords, type)
 	
+
+func build_from_card(card, position):
+	$TML_Buildings.set_cell(position, 1, Vector2i(0,0))
 
 func spread_block(position: Vector2i) -> bool:
 	# get four adjoining squares

@@ -10,8 +10,8 @@ var card_data = {
 
 var slots = [
 	{"position" : Vector2i(0, 200), "free" : true},
-	{"position" : Vector2i(-175, 200), "free" : true},
-	{"position" : Vector2i(175, 200), "free" : true}]
+	{"position" : Vector2i(-160, 200), "free" : true},
+	{"position" : Vector2i(160, 200), "free" : true}]
 
 var card_deck = []
 
@@ -69,3 +69,5 @@ func get_selected_card():
 	for c in get_children():
 		if c.selected:
 			return c
+	
+	return false
