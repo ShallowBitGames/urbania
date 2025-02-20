@@ -25,6 +25,10 @@ var card_scene = preload("res://card.tscn")
 func _ready() -> void:
 	pass
 
+func rearrange_slots():
+	var active_cards = get_child_count()
+	
+
 func load_card(cardID) -> Card:
 	var datapath = card_data[cardID]
 	var data = load(datapath)
@@ -53,8 +57,8 @@ func card_count():
 			count += 1
 	return count
 
-func remove_card(cardID):
-	pass
+func remove_card(card):
+	remove_child(card)
 
 
 # 'clicked' here is selected -> should be raised, all others lowers

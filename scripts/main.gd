@@ -4,8 +4,15 @@ enum Block {NONE, MIXED, TRENDY, FAMILY, WEALTHY, POOR, TOURIST}
 
 enum Card {CLINIC, LIBRARY, PARK}
 
-const BLOCK_TYPE = "blocktype"
-const POPULATION = "population"
+enum BlockData {
+	BLOCK_TYPE,
+	POPULATION,
+	QOL,
+	APPEAL
+}
+
+#const BLOCK_TYPE = "blocktype"
+#const POPULATION = "population"
 
 var tile_data : Array
 
@@ -32,35 +39,43 @@ func _ready() -> void:
 		tile_data[i] = []
 		tile_data[i].resize(map_size.y)
 		for j in tile_data[i].size():
-			tile_data[i][j] = {BLOCK_TYPE: Block.NONE, POPULATION: 0}
+			tile_data[i][j] = {}
+			tile_data[i][j][BlockData.BLOCK_TYPE] = Block.NONE
+			tile_data[i][j][BlockData.POPULATION] = 0
+			tile_data[i][j][BlockData.QOL] = 0
+			tile_data[i][j][BlockData.APPEAL] = 0
+			
+			#tile_data[i][j] = {BLOCK_TYPE: Block.NONE, POPULATION: 0}
 	
 #	print(tile_data)
 	build_block(Vector2i(0,-1), Block.MIXED, 100)
 	build_block(Vector2i(0,0), Block.TRENDY, 215)
 #	print(tile_data)
 	
-	
 	#hand = []
 	#draw_stone()
 	#draw_stone()
 	#draw_stone()
+	
 
+func _process(delta: float) -> void:
+	var mouse_pos = $TML_Base.local_to_map($TML_Base.get_local_mouse_position())
+	var position = base_to_build(mouse_pos)
+	
+	if inside_boundaries(position):
+		$TML_Buildings.get_cell_tile_data(position)
+		var bd = getBlockDataAll(position)
+		$txt_stats.showInfo(position, bd[BlockData.POPULATION], 
+							bd[BlockData.QOL], bd[BlockData.APPEAL])
 
-func getPopulation(coords: Vector2i):
-	return tile_data[coords.x][coords.y][POPULATION]
+func getBlockDataAll(coords: Vector2i):
+	return tile_data[coords.x][coords.y]
 
-func getType(coords: Vector2i):
-	return tile_data[coords.x][coords.y][BLOCK_TYPE]
+func getBlockData(coords: Vector2i, datatype):
+	return tile_data[coords.x][coords.y][datatype]
 
-#func getTotalPopulation():
-#	pass
-
-func setPopulation(coords: Vector2i, population: int):
-	tile_data[coords.x][coords.y][POPULATION] = population
-
-func setType(coords: Vector2i, type):
-	tile_data[coords.x][coords.y][BLOCK_TYPE] = type
-
+func setBlockData(coords: Vector2i, datatype, value: int):
+	tile_data[coords.x][coords.y][datatype] = value
 
 func _input(event):
 	
@@ -74,7 +89,7 @@ func _input(event):
 			
 		elif $TML_Buildings.get_cell_tile_data(position):
 			print("population:")
-			print(getPopulation(position))
+			print(getBlockData(position, BlockData.POPULATION))
 			spread_block(position)
 		
 		elif !is_buildable(position):
@@ -85,6 +100,7 @@ func _input(event):
 			if $Hand.get_selected_card():
 				var card = $Hand.get_selected_card()
 				build_from_card(card, position)
+				$Hand.remove_card(card)
 			else:
 				build_block(position,Block.MIXED,100)
 		
@@ -94,7 +110,7 @@ func spread_blocks():
 	var block_positions = $TML_Buildings.get_used_cells()
 	
 	for coord in block_positions:
-		if getPopulation(coord) >= spread_threshold:
+		if getBlockData(coord, BlockData.POPULATION) >= spread_threshold:
 			spread_block(coord)
 
 func pass_turn():
@@ -120,9 +136,8 @@ func build_block(coords: Vector2i, type, population: int):
 	var atlas_coords = block_atlas[type]
 	$TML_Buildings.set_cell(coords, 1, atlas_coords)
 	
-	setPopulation(coords, population)
-	setType(coords, type)
-	
+	setBlockData(coords, BlockData.POPULATION, population)
+	setBlockData(coords, BlockData.BLOCK_TYPE, type)
 
 func build_from_card(card, position):
 	$TML_Buildings.set_cell(position, 1, Vector2i(0,0))
@@ -145,8 +160,8 @@ func spread_block(position: Vector2i) -> bool:
 	
 	#var type = $TML_Buildings.get_cell_tile_data(position).get_custom_data(BLOCK_TYPE)
 	#var orig_population = $TML_Buildings.get_cell_tile_data(position).get_custom_data(POPULATION)
-	var type = getType(position)
-	var og_population = getPopulation(position)
+	var type = getBlockData(position, BlockData.BLOCK_TYPE)
+	var og_population = getBlockData(position, BlockData.POPULATION)
 	var population = og_population / 5
 	
 	# get free space with maximum attractiveness
