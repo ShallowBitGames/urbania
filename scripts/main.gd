@@ -33,7 +33,7 @@ const spread_threshold = 80;
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var map_size = $TML_Base.get_used_rect().size
+	var map_size = $Map/TML_Base.get_used_rect().size
 	tile_data.resize(map_size.x)
 	for i in tile_data.size():
 		tile_data[i] = []
@@ -59,11 +59,11 @@ func _ready() -> void:
 	
 
 func _process(delta: float) -> void:
-	var mouse_pos = $TML_Base.local_to_map($TML_Base.get_local_mouse_position())
+	var mouse_pos = $Map/TML_Base.local_to_map($Map/TML_Base.get_local_mouse_position())
 	var position = base_to_build(mouse_pos)
 	
 	if inside_boundaries(position):
-		$TML_Buildings.get_cell_tile_data(position)
+		$Map/TML_Buildings.get_cell_tile_data(position)
 		var bd = getBlockDataAll(position)
 		$txt_stats.showInfo(position, bd[BlockData.POPULATION], 
 							bd[BlockData.QOL], bd[BlockData.APPEAL])
@@ -80,14 +80,14 @@ func setBlockData(coords: Vector2i, datatype, value: int):
 func _input(event):
 	
 	if event.is_action_released("left_click"):
-		var clicked_cell = $TML_Base.local_to_map($TML_Base.get_local_mouse_position())
+		var clicked_cell = $Map/TML_Base.local_to_map($Map/TML_Base.get_local_mouse_position())
 		var position = base_to_build(clicked_cell)
 		
 		if !inside_boundaries(position):
 			pass
 	#		print("outside bounds")
 			
-		elif $TML_Buildings.get_cell_tile_data(position):
+		elif $Map/TML_Buildings.get_cell_tile_data(position):
 			print("population:")
 			print(getBlockData(position, BlockData.POPULATION))
 			spread_block(position)
@@ -107,7 +107,7 @@ func _input(event):
 #		spread_blocks()
 
 func spread_blocks():
-	var block_positions = $TML_Buildings.get_used_cells()
+	var block_positions = $Map/TML_Buildings.get_used_cells()
 	
 	for coord in block_positions:
 		if getBlockData(coord, BlockData.POPULATION) >= spread_threshold:
@@ -124,23 +124,23 @@ func build_to_base(coordinates: Vector2i) -> Vector2i:
 	return Vector2i(coordinates[0]+1, coordinates[1]+1)
 
 func inside_boundaries(coord: Vector2i) -> bool:
-	var board = $TML_Base.get_used_rect()
+	var board = $Map/TML_Base.get_used_rect()
 	return board.has_point(build_to_base(coord))
 
 func is_buildable(coord: Vector2i) -> bool:
 	var base_coord = build_to_base(coord)
-	var tile_atlas_coords = $TML_Base.get_cell_atlas_coords(base_coord)
+	var tile_atlas_coords = $Map/TML_Base.get_cell_atlas_coords(base_coord)
 	return tile_atlas_coords != Vector2i(0,0)
 
 func build_block(coords: Vector2i, type, population: int):
 	var atlas_coords = block_atlas[type]
-	$TML_Buildings.set_cell(coords, 1, atlas_coords)
+	$Map/TML_Buildings.set_cell(coords, 1, atlas_coords)
 	
 	setBlockData(coords, BlockData.POPULATION, population)
 	setBlockData(coords, BlockData.BLOCK_TYPE, type)
 
 func build_from_card(card, position):
-	$TML_Buildings.set_cell(position, 1, Vector2i(0,0))
+	$Map/TML_Buildings.set_cell(position, 1, Vector2i(0,0))
 
 func spread_block(position: Vector2i) -> bool:
 	# get four adjoining squares
@@ -151,7 +151,7 @@ func spread_block(position: Vector2i) -> bool:
 	var surrounding = []
 	for coord in [Vector2i(x-1, y), Vector2i(x+1, y), Vector2i(x, y-1), Vector2i(x, y+1)]:
 		if inside_boundaries(coord): 
-			if !$TML_Buildings.get_cell_tile_data(coord):
+			if !$Map/TML_Buildings.get_cell_tile_data(coord):
 				if is_buildable(coord):
 					surrounding.append(coord)
 	

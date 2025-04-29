@@ -9,11 +9,13 @@
 [node name="Game" type="Node"]
 script = ExtResource("1_slnsu")
 
-[node name="TML_Base" type="TileMapLayer" parent="."]
+[node name="Map" type="Node2D" parent="."]
+
+[node name="TML_Base" type="TileMapLayer" parent="Map"]
 tile_map_data = PackedByteArray("AAAAAP//AQADAAAAAAABAP//AQADAAAAAAD/////AQADAAAAAAABAAAAAQADAAAAAAD+/wEAAQADAAAAAAD//wEAAQADAAAAAAAAAAEAAQADAAAAAAABAAEAAQADAAAAAAD+/wIAAQADAAAAAAD//wIAAQADAAAAAAAAAAIAAQADAAAAAAD+////AQADAAAAAAAAAAAAAQADAAAAAAD+/wAAAQADAAAAAAD//wAAAQADAAAAAAABAAIAAQADAAAAAAA=")
 tile_set = ExtResource("2_jh2l2")
 
-[node name="TML_Buildings" type="TileMapLayer" parent="."]
+[node name="TML_Buildings" type="TileMapLayer" parent="Map"]
 tile_set = ExtResource("2_jh2l2")
 script = ExtResource("3_sto6c")
 
@@ -25,17 +27,17 @@ script = ExtResource("4_6yttl")
 [node name="TestButtons" type="CanvasLayer" parent="."]
 
 [node name="btn_turn" type="Button" parent="TestButtons"]
-offset_left = 364.0
-offset_top = 218.0
-offset_right = 495.0
-offset_bottom = 271.0
+offset_left = 273.0
+offset_top = 156.0
+offset_right = 404.0
+offset_bottom = 209.0
 text = "TURN"
 
 [node name="btn_draw" type="Button" parent="TestButtons"]
-offset_left = 363.0
-offset_top = 150.0
-offset_right = 494.0
-offset_bottom = 203.0
+offset_left = 272.0
+offset_top = 88.0
+offset_right = 403.0
+offset_bottom = 141.0
 text = "DRAW"
 
 [node name="txt_stats" type="RichTextLabel" parent="."]

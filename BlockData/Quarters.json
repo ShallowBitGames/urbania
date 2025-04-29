@@ -1,0 +1,5 @@
+{
+  "Mixed": {"name": "Mixed", "population":200, "qol": 100, "attr": 100, "age": 35},
+  "Poor": {"name": "Low Income", "population": 400, "qol": 50, "attr": 50, "age": 35},
+  "Student": {"name": "Trendy", "population": 300, "qol": 120, "attr": 120, "age": 25}
+}
