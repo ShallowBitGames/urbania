@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 namespace urbania.scripts;
 
+
+
 public enum BlockType
 {
     None,
@@ -28,17 +30,21 @@ public enum GroundType
 
 public static class TileStrings
 {
-    private static readonly Dictionary<BlockType, string> _blockStrings = new Dictionary<BlockType, string>
-    {
-        { BlockType.None, "NONE" },
-        { BlockType.Mixed, "MIXED" },
-        { BlockType.Poor, "POOR" },
-        { BlockType.Student, "STUDENT" },
-        { BlockType.Trendy, "TRENDY" },
-        { BlockType.SFH, "SFH" },
-        { BlockType.Villas, "VILLAS" },
-    };
 
+
+    public record BlockType(string TypeString, bool CanBuildNew, bool CanBuildAddition, BlockFactory Factory);
+
+    public static readonly BlockType None = new BlockType("NONE", true, false);
+    public static readonly BlockType Mixed = new BlockType("MIXED", true, true);
+    public static readonly BlockType Poor = new BlockType("POOR", true, true);
+    public static readonly BlockType Student = new BlockType("STUDENT", true, true);
+    public static readonly BlockType Trendy = new BlockType("TRENDY", true, true);
+    public static readonly BlockType SingleFamilyHouses = new BlockType("SFH", false, false);
+    public static readonly BlockType Villas = new BlockType("VILLAS", false, false);
+
+
+    public record GroundType(string TypeString, bool CanBuildOn);
+    
     private static readonly Dictionary<GroundType, string> _groundStrings = new Dictionary<GroundType, string>
     {
         { GroundType.Normal, "NORMAL" },

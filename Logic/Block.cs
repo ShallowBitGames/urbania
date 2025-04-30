@@ -27,5 +27,11 @@ public partial class Block : Node
         else
             Population = 0;
     }
+
+
+    public static Block Generate(BlockType type)
+    {
+        
+    }
     
 }
