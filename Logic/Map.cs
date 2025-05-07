@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using static urbania.scripts.BlockTypes;
 using urbania.scripts;
 
 public partial class Map : Node2D
@@ -11,7 +12,7 @@ public partial class Map : Node2D
     
     public struct Tile
     {
-        public GroundType GroundType { get; set; }
+        public GroundTypes.GroundType GroundType { get; set; }
         public Block TownBlock { get; set; }
     }
     
@@ -35,8 +36,8 @@ public partial class Map : Node2D
         for(int i = 0; i < Width; i++)
             for (int j = 0; j < Length; j++) 
             {
-                GroundType ground = _tiles[i, j].GroundType;
-                groundMap[i, j] = TileStrings.get(ground);
+                GroundTypes.GroundType ground = _tiles[i, j].GroundType;
+                groundMap[i, j] = ground.TypeString;
             }
         
         return groundMap;
@@ -45,17 +46,17 @@ public partial class Map : Node2D
     public bool IsBuildable(int x, int y)
     {
         Tile tile = _tiles[x,y];
-        bool groundIsBuildable = tile.GroundType == GroundType.Normal 
-                                 || tile.GroundType == GroundType.Forest;
+        
+        bool groundIsBuildable = tile.GroundType.CanBuildOn;
 
-        bool isFree = tile.TownBlock.Type == BlockType.None;
+        bool isFree = tile.TownBlock.Type.CanBuildNew;
         
         return groundIsBuildable && isFree;
     }
 
-    public void CreateBlock(int x, int y, BlockType tileStrings)
+    public void CreateBlock(int x, int y, BlockType type)
     {
-        _tiles[x, y].TownBlock = new Block(tileStrings);
+        _tiles[x, y].TownBlock = BlockFactory.Generate(type);
     }
  
 }

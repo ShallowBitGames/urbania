@@ -4,15 +4,18 @@ using urbania.scripts;
 
 public partial class Block : Node
 {
-    public BlockType Type { get; private set; }
+    public BlockTypes.BlockType Type { get; private set; }
     public int Population { get; private set; }
-    public float Attractiveness { get; private set; }
-    public float QoL{ get; private set; }
+    public double Attractiveness { get; private set; }
+    public double QoL{ get; private set; }
 
 
-    public Block(BlockType type)
+    public Block(BlockTypes.BlockType type, int  population = 0, double attractiveness = 0, double qoL = 0)
     {
         Type = type;
+        Population = population;
+        Attractiveness = attractiveness;
+        QoL = qoL;
     }
     
     public void IncreasePopulation(int amount)
@@ -27,11 +30,6 @@ public partial class Block : Node
         else
             Population = 0;
     }
-
-
-    public static Block Generate(BlockType type)
-    {
-        
-    }
+    
     
 }
