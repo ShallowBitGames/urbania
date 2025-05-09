@@ -58,5 +58,17 @@ public partial class Map : Node2D
     {
         _tiles[x, y].TownBlock = BlockFactory.Generate(type);
     }
- 
+
+
+    public void PassTurn()
+    {
+        // State: user-driven changes have already been handled
+        // (meaning: new block built, displacement taken care of and values recalculated)
+        
+        // Each tile draws population
+        
+        // Internal migration
+        
+    }
+    
 }

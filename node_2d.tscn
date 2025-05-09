@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=4 uid="uid://dt0t5u6xx85yc"]
+[gd_scene load_steps=7 format=4 uid="uid://dt0t5u6xx85yc"]
 
 [ext_resource type="Script" uid="uid://dopgd3ogr3vsl" path="res://scripts/main.gd" id="1_slnsu"]
 [ext_resource type="TileSet" uid="uid://bawg2sfxgyuug" path="res://blocks.tres" id="2_jh2l2"]
+[ext_resource type="Script" uid="uid://cwpuf8eormiqw" path="res://Logic/Map.cs" id="2_kdubu"]
 [ext_resource type="Script" uid="uid://n0bea2t62r4b" path="res://scripts/tml_buildings.gd" id="3_sto6c"]
 [ext_resource type="Script" uid="uid://3snfuygux8jq" path="res://scripts/hand.gd" id="4_6yttl"]
 [ext_resource type="Script" uid="uid://ckhfprjx24eu8" path="res://scripts/txt_stats.gd" id="5_gqua8"]
@@ -10,6 +11,7 @@
 script = ExtResource("1_slnsu")
 
 [node name="Map" type="Node2D" parent="."]
+script = ExtResource("2_kdubu")
 
 [node name="TML_Base" type="TileMapLayer" parent="Map"]
 tile_map_data = PackedByteArray("AAAAAP//AQADAAAAAAABAP//AQADAAAAAAD/////AQADAAAAAAABAAAAAQADAAAAAAD+/wEAAQADAAAAAAD//wEAAQADAAAAAAAAAAEAAQADAAAAAAABAAEAAQADAAAAAAD+/wIAAQADAAAAAAD//wIAAQADAAAAAAAAAAIAAQADAAAAAAD+////AQADAAAAAAAAAAAAAQADAAAAAAD+/wAAAQADAAAAAAD//wAAAQADAAAAAAABAAIAAQADAAAAAAA=")
