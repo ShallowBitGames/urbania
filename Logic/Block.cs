@@ -1,8 +1,7 @@
-using Godot;
 using System;
 using urbania.scripts;
 
-public partial class Block : Node
+public class Block
 {
     public BlockTypes.BlockType Type { get; private set; }
     public int Population { get; private set; }
@@ -31,7 +30,6 @@ public partial class Block : Node
             Population = 0;
     }
     
-    public void 
     
     
 }

@@ -1,9 +1,8 @@
-using Godot;
 using System;
 using static urbania.scripts.BlockTypes;
 using urbania.scripts;
 
-public partial class Map : Node2D
+public partial class Map
 {
     public int Width { get; }
     public int Length { get; }

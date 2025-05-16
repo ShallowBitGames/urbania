@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ITAD3-TN06\\Documents\\GitHub\\urbania\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E9AFA-C2CB-4E9E-AE84-F1003607B8D8}|urbania.csproj|c:\\users\\itad3-tn06\\documents\\github\\urbania\\logic\\tilestrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E9AFA-C2CB-4E9E-AE84-F1003607B8D8}|urbania.csproj|solutionrelative:logic\\tilestrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8B7E9AFA-C2CB-4E9E-AE84-F1003607B8D8}|urbania.csproj|c:\\users\\itad3-tn06\\documents\\github\\urbania\\logic\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8B7E9AFA-C2CB-4E9E-AE84-F1003607B8D8}|urbania.csproj|solutionrelative:logic\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TileStrings.cs",
+              "DocumentMoniker": "C:\\Users\\ITAD3-TN06\\Documents\\GitHub\\urbania\\Logic\\TileStrings.cs",
+              "RelativeDocumentMoniker": "Logic\\TileStrings.cs",
+              "ToolTip": "C:\\Users\\ITAD3-TN06\\Documents\\GitHub\\urbania\\Logic\\TileStrings.cs",
+              "RelativeToolTip": "Logic\\TileStrings.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAgwCkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T06:37:22.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Map.cs",
+              "DocumentMoniker": "C:\\Users\\ITAD3-TN06\\Documents\\GitHub\\urbania\\Logic\\Map.cs",
+              "RelativeDocumentMoniker": "Logic\\Map.cs",
+              "ToolTip": "C:\\Users\\ITAD3-TN06\\Documents\\GitHub\\urbania\\Logic\\Map.cs",
+              "RelativeToolTip": "Logic\\Map.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-30T06:37:20.303Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

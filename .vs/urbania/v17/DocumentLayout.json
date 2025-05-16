@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ITAD3-TN06\\Documents\\GitHub\\urbania\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8B7E9AFA-C2CB-4E9E-AE84-F1003607B8D8}|urbania.csproj|c:\\users\\itad3-tn06\\documents\\github\\urbania\\logic\\tilestrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8B7E9AFA-C2CB-4E9E-AE84-F1003607B8D8}|urbania.csproj|solutionrelative:logic\\tilestrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ITAD3-TN06\\Documents\\GitHub\\urbania\\Logic\\TileStrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Logic\\TileStrings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8B7E9AFA-C2CB-4E9E-AE84-F1003607B8D8}|urbania.csproj|c:\\users\\itad3-tn06\\documents\\github\\urbania\\logic\\map.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -18,8 +18,16 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -28,10 +36,8 @@
               "RelativeDocumentMoniker": "Logic\\TileStrings.cs",
               "ToolTip": "C:\\Users\\ITAD3-TN06\\Documents\\GitHub\\urbania\\Logic\\TileStrings.cs",
               "RelativeToolTip": "Logic\\TileStrings.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCkAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T06:37:22.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T06:37:22.626Z"
             },
             {
               "$type": "Document",
@@ -43,8 +49,7 @@
               "RelativeToolTip": "Logic\\Map.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-30T06:37:20.303Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-30T06:37:20.303Z"
             }
           ]
         }

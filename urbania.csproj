@@ -2,11 +2,9 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
+    <OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="BlockData\Quarters.json" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="scripts\" />
+    <Content Include="Data\Quarters.json" />
   </ItemGroup>
 </Project>
