@@ -1,0 +1,68 @@
+{
+    "CitizenTypes" : [
+        {
+            "Name" : "Child",
+            "StartingAge" : 0,
+            "MaximumAge" : 12,
+            "StartingWealth" : -500,
+            "YearlyWealthGrowth" : -15,
+            "DisabilityChance" : 0.02,
+            "DeathChance" : 0.01,
+            "StatImpact" : {
+                "Culture" : 0,
+                "Industry" : 0,
+                "Education" : 3,
+                "Social" : 3,
+                "Nature" : 1
+            }
+        },
+        {
+            "Name" : "Teen",
+            "StartingAge" : 13,
+            "MaximumAge" : 17,
+            "StartingWealth" : -680,
+            "YearlyWealthGrowth" : 0,
+            "DisabilityChance" : 0.02,
+            "DeathChance" : 0.01,
+            "StatImpact" : {
+                "Culture" : 2,
+                "Industry" : 0,
+                "Education" : 2,
+                "Social" : 2,
+                "Nature" : 1
+            }
+        },
+        {
+            "Name" : "Adult",
+            "StartingAge" : 18,
+            "MaximumAge" : 65,
+            "StartingWealth" : 500,
+            "YearlyWealthGrowth" : 50,
+            "DisabilityChance" : 0.05,
+            "DeathChance" : 0.03,
+            "StatImpact" : {
+                "Culture" : 2,
+                "Industry" : 2,
+                "Education" : 1,
+                "Social" : 1,
+                "Nature" : 1
+            }
+        },
+        {
+            "Name" : "Senior",
+            "StartingAge" : 13,
+            "MaximumAge" : 17,
+            "StartingWealth" : 2850,
+            "YearlyWealthGrowth" : -100,
+            "DisabilityChance" : 0.1,
+            "DeathChance" : 0.05,
+            "StatImpact" : {
+                "Culture" : 1,
+                "Industry" : 0,
+                "Education" : 0,
+                "Social" : 3,
+                "Nature" : 3
+            }
+        }
+    ]
+}
