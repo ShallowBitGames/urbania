@@ -31,7 +31,5 @@ public partial class Block : Node
             Population = 0;
     }
     
-    public void 
-    
     
 }
