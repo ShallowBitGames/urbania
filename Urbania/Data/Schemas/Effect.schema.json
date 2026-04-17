@@ -1,0 +1,10 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "urbania:effect",
+    "title": "Effect",
+    "type": "object",
+    "properties": {
+        "Type" : "string",
+        "Reach" : "integer"
+    }
+}

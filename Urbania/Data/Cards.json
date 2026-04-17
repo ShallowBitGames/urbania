@@ -1,0 +1,23 @@
+{
+    "C_Hospital" : {
+        "Name" : "Hospital",
+        "Cost" : 100,
+        "CreatesBuilding": "B_Hospital"
+    },
+    "C_Park" : {
+        "Name" : "Small Park",
+        "Cost" : 10,
+        "CreatesBuilding" : "B_Park"
+    },
+    "C_SubsidizeBoth" : {
+        "Name" : "Subsidize Local Businesses",
+        "Cost" : 200,
+        "Effect" : {
+            "Type" : "FULL_MAP",
+            "StatBonus" : {
+                "Creative" : 1,
+                "Industry" : 1
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+{
+    "B_Hospital" : {
+        "Name" : "Hospital",
+        "Replacement" : "LARGE",
+        "Effects": [
+                {
+                    "Type" : "LOCALIZED_NOLOSS",
+                    "Reach" : 50,
+                    "StatBonus": {
+                        "Social" : 3
+                    }
+                }
+            ]
+    }
+}
