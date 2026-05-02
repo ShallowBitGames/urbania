@@ -1,0 +1,42 @@
+{
+    "Child": {
+        "Name": "Child",
+        "StartingAge": 0,
+        "MaximumAge": 12,
+        "StartingWealth": -500,
+        "YearlyWealthGrowth": -15,
+        "DisabilityChance": 0.02,
+        "DeathChance": 0.01,
+        "StatImpact": {
+            "Culture": 0,
+            "Industry": 0,
+            "Education": 3,
+            "Social": 3,
+            "Nature": 1
+        },
+        "Transitions" : [
+            {
+                "Trigger" : "MaxAgeReached",
+                "TargetType" : "Teen",
+                "Probability" : 1.0
+            }
+        ]
+    },
+    "Teen": {
+        "Name": "Teen",
+        "StartingAge": 13,
+        "MaximumAge": 17,
+        "StartingWealth": -680,
+        "YearlyWealthGrowth": 0,
+        "DisabilityChance": 0.02,
+        "DeathChance": 0.01,
+        "StatImpact": {
+            "Culture": 2,
+            "Industry": 0,
+            "Education": 2,
+            "Social": 2,
+            "Nature": 1
+        },
+        "T"
+    }
+}

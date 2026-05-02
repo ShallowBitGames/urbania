@@ -16,3 +16,11 @@ mono_crash.*.json
 *.tmp
 /.idea
 /.vs
+Urbania/Core/obj/Debug/net10.0/Urbania.AssemblyInfoInputs.cache
+Urbania/Core/obj/project.nuget.cache
+Urbania/Core/obj/Urbania.csproj.nuget.dgspec.json
+Urbania/Core/obj/Urbania.csproj.nuget.g.props
+Urbania/Core/obj/Debug/net10.0/Urbania.AssemblyInfo.cs
+Urbania/Core/obj/Debug/net10.0/Urbania.AssemblyInfoInputs.cache
+Urbania/Core/obj/Debug/net10.0/Urbania.assets.cache
+Urbania/Core/obj/Debug/net10.0/Urbania.GeneratedMSBuildEditorConfig.editorconfig

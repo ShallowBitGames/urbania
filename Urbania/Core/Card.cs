@@ -1,5 +1,7 @@
-namespace Urbania.Core {
+using System.Text.Json.Nodes;
 
+namespace Urbania.Core {
+/*
     class Card {
 
         public string Title { get; }
@@ -26,11 +28,11 @@ namespace Urbania.Core {
 
             if(json.Contains("Effects")){
                 JsonArray effectsArray = json.GetArray("Effects");
-                for(JsonObject effectJson in effectsArray)
+                foreach(JsonObject effectJson in effectsArray)
                     Effects.Add(new Effect(effectJson));
             }
             
         }
     }
-
+*/
 }

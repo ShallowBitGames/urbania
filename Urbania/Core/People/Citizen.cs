@@ -1,48 +1,20 @@
-namespace Urbania.People
-{
+using System.ComponentModel.DataAnnotations;
 
-    
-public enum CitizenType
-{
-    Child,
-    Teen,
-    Senior,
-    Student,
-    Caregiver,
-    Worker,
-    Wealthy,
-    Dog
-}
-
-public class CitizenType
-{
-    public string Name { get; }
-    public int StartingAge { get; }
-    public float StartingWealth { get; }
-    public float YearlyWealthGrowth { get; }
-    public float DisabilityChance { get; }
-    public float DeathChance { get; }
-}
-
+namespace Urbania.People;
     
 public class Citizen
 {
     private static Random rng = new();
-
-    private Household Household;
     public CitizenType Type { get; private set; }
-    public string Name { get; }
     public int Age { get; private set; }
     public float Wealth { get; private set; }
     public float Health { get; set; }
     public float Joy { get; set; }
     public bool Disabled { get; set; }
 
-    public Citizen(CitizenType type, Household household, string name)
+    public Citizen(CitizenType type)
     {
-        Household = household;
         Type = type;
-        Name = name;
         Age = type.StartingAge;
         Wealth = type.StartingWealth;
         Disabled = RollDisability();
@@ -50,7 +22,8 @@ public class Citizen
 
     public void ChangeWealth(float amount)
     {
-        this.Wealth += amount;
+        Wealth += amount;
+        Wealth = Math.Max(Wealth, 0);
     }
 
     public bool CanAfford(float cost)
@@ -62,16 +35,18 @@ public class Citizen
     {
         Age += amount;
 
-        if(Age > Type.MaxAge)
-            Type = Type.NextType();
-    
+        if(Age > Type.MaximumAge)
+            Type = Type.TransitionMaxAge();
+        else
+            Type = Type.TransitionAgeUp();
+
         // random distributed chance to acquire disability
         if(!Disabled && RollDisability())
             Disabled = true;
 
         // random distributed chance to die
-        if(RollDeath())
-            Household.RemoveMember(this);
+        //if(RollDeath())
+        //    Household.RemoveMember(this);
 
     }
 
@@ -85,5 +60,4 @@ public class Citizen
         return rng.NextDouble() >= Type.DeathChance;
     }
 
-}
 }

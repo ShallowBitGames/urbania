@@ -1,0 +1,249 @@
+{
+    "Child": {
+        "Name": "Child",
+        "StartingAge": 0,
+        "MaximumAge": 12,
+        "StartingWealth": -500,
+        "YearlyWealthGrowth": -15,
+        "DisabilityChance": 0.02,
+        "DeathChance": 0.01,
+        "StatImpact": {
+            "Culture": 0,
+            "Industry": 0,
+            "Education": 3,
+            "Social": 3,
+            "Nature": 1
+        },
+        "Transitions" : [
+            {
+                "Trigger" : "MaxAgeReached",
+                "TargetType" : "Teen",
+                "Probability" : 1.0
+            }
+        ]
+    },
+    "Teen": {
+        "Name": "Teen",
+        "StartingAge": 13,
+        "MaximumAge": 17,
+        "StartingWealth": -680,
+        "YearlyWealthGrowth": 0,
+        "DisabilityChance": 0.02,
+        "DeathChance": 0.01,
+        "StatImpact": {
+            "Culture": 2,
+            "Industry": 0,
+            "Education": 2,
+            "Social": 2,
+            "Nature": 1
+        },
+        "Transitions": [
+            {
+                "TargetType": "Student",
+                "Trigger": "MaxAgeReached",
+                "Probability": 0.4
+            },
+            {
+                "TargetType": "Worker",
+                "Trigger": "MaxAgeReached",
+                "Probability": 0.5
+            },
+            {
+                "TargetType": "Creative",
+                "Trigger": "MaxAgeReached",
+                "Probability": 0.05
+            },
+            {
+                "TargetType": "Caregiver",
+                "Trigger": "MaxAgeReached",
+                "Probability": 0.04
+            },
+            {
+                "TargetType": "Wealthy",
+                "Trigger": "MaxAgeReached",
+                "Probability": 0.01
+            }
+        ]
+    },
+    "Adult": {
+        "Name": "Adult",
+        "StartingAge": 18,
+        "MaximumAge": 59,
+        "StartingWealth": 500,
+        "YearlyWealthGrowth": 50,
+        "DisabilityChance": 0.05,
+        "DeathChance": 0.03,
+        "StatImpact": {
+            "Culture": 2,
+            "Industry": 2,
+            "Education": 1,
+            "Social": 1,
+            "Nature": 1
+        },
+        "Transitions" : []
+    },
+    "Senior": {
+        "Name": "Senior",
+        "StartingAge": 60,
+        "MaximumAge": 100,
+        "StartingWealth": 2850,
+        "YearlyWealthGrowth": -100,
+        "DisabilityChance": 0.1,
+        "DeathChance": 0.05,
+        "StatImpact": {
+            "Culture": 1,
+            "Industry": 0,
+            "Education": 1,
+            "Social": 3,
+            "Nature": 2
+        },
+        "Transitions" : []
+    },
+    "Dog": {
+        "Name": "Dog",
+        "StartingAge": 0,
+        "MaximumAge": 15,
+        "StartingWealth": 0,
+        "YearlyWealthGrowth": -10,
+        "DisabilityChance": 0,
+        "DeathChance": 0.05,
+        "StatImpact": {
+            "Culture": 0,
+            "Industry": 0,
+            "Education": 0,
+            "Social": 0,
+            "Nature": 3
+        },
+        "Transitions" : []
+    },
+    "Student": {
+        "Name": "Adult",
+        "StartingAge": 18,
+        "MaximumAge": 59,
+        "StartingWealth": 500,
+        "YearlyWealthGrowth": 50,
+        "DisabilityChance": 0.05,
+        "DeathChance": 0.03,
+        "StatImpact": {
+            "Culture": 2,
+            "Industry": 1,
+            "Education": 2,
+            "Social": 1,
+            "Nature": 1
+        },
+        "Transitions": [
+            {
+                "TargetType": "Senior",
+                "Trigger": "MaxAgeReached",
+                "Probability": 1
+            },
+            {
+                "TargetType": "Creative",
+                "Trigger": "Yearly",
+                "Probability": 0.05
+            },
+            {
+                "TargetType": "Worker",
+                "Trigger": "MaxAgeReached",
+                "Probability": 0.3
+            },
+            {
+                "TargetType": "Caregiver",
+                "Trigger": "MaxAgeReached",
+                "Probability": 0.05
+            }
+        ]
+    },
+    "Worker": {
+        "Name": "Worker",
+        "StartingAge": 18,
+        "MaximumAge": 59,
+        "StartingWealth": 500,
+        "YearlyWealthGrowth": 50,
+        "DisabilityChance": 0.05,
+        "DeathChance": 0.03,
+        "StatImpact": {
+            "Culture": 1,
+            "Industry": 3,
+            "Education": 1,
+            "Social": 1,
+            "Nature": 1
+        },
+        "Transitions": [
+            {
+                "TargetType": "Senior",
+                "Trigger": "MaxAgeReached",
+                "Probability": 1
+            }
+        ]
+    },
+    "Creative": {
+        "Name": "Creative",
+        "StartingAge": 18,
+        "MaximumAge": 59,
+        "StartingWealth": 500,
+        "YearlyWealthGrowth": 50,
+        "DisabilityChance": 0.05,
+        "DeathChance": 0.03,
+        "StatImpact": {
+            "Culture": 1,
+            "Industry": 3,
+            "Education": 1,
+            "Social": 1,
+            "Nature": 1
+        },
+        "Transitions": [
+            {
+                "TargetType": "Senior",
+                "Trigger": "MaxAgeReached",
+                "Probability": 1
+            }
+        ]
+    },
+    "Caregiver": {
+        "Name": "Caregiver",
+        "StartingAge": 18,
+        "MaximumAge": 59,
+        "StartingWealth": 500,
+        "YearlyWealthGrowth": 50,
+        "DisabilityChance": 0.05,
+        "DeathChance": 0.03,
+        "StatImpact": {
+            "Culture": 1,
+            "Industry": 1,
+            "Education": 1,
+            "Social": 3,
+            "Nature": 1
+        },
+        "Transitions": [
+            {
+                "TargetType": "Senior",
+                "Trigger": "MaxAgeReached",
+                "Probability": 1
+            }
+        ]
+    },
+    "Wealthy": {
+        "Name": "Wealthy",
+        "StartingAge": 18,
+        "MaximumAge": 59,
+        "StartingWealth": 500,
+        "YearlyWealthGrowth": 50,
+        "DisabilityChance": 0.05,
+        "DeathChance": 0.03,
+        "StatImpact": {
+            "Culture": 3,
+            "Industry": 2,
+            "Education": 1,
+            "Social": 0,
+            "Nature": 1
+        },
+        "Transitions": [
+            {
+                "TargetType": "Senior",
+                "Trigger": "MaxAgeReached",
+                "Probability": 1
+            }
+        ]
+    }
+}
