@@ -4,7 +4,7 @@ using Urbania.People;
 
 Console.WriteLine("Hello, World!");
 
-using(FileStream sr = File.OpenRead("../Data/CitizenTypes.json"))
+using(FileStream sr = File.OpenRead("../../../../Core/Data/CitizenTypes.json"))
 {
     Dictionary<string, CitizenType> citizenTypes = 
         JsonSerializer.Deserialize<Dictionary<string, CitizenType>>(sr);

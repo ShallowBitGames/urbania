@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Urbania\Core\Urbania.csproj" />
+    <ProjectReference Include="..\Core\Urbania.csproj" />
   </ItemGroup>
 
 </Project>
