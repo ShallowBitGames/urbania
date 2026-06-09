@@ -1,0 +1,36 @@
+[
+        {
+            "Name" : "Hospital",
+            "Cost" : 100,
+            "Effects" : ["Social2_Wide"],
+            "BuildingKey" : "Small_Hospital",
+            "Filename" : "hospital.png"
+        },
+        {
+            "Name" : "Subsidize Local Businesses",
+            "Cost" : 100,
+            "Effects" : ["Economy1_Full"],
+            "ResourceName" : "subsidize_business.png"
+        },
+        {
+            "Name" : "Museum",
+            "Cost" : 100,
+            "Effects" : ["Culture2_Wide"],
+            "BuildingKey": "Small_Museum",
+            "ResourceName" : "museum.png"
+        },
+        {
+            "Name" : "Park",
+            "Cost" : 25,
+            "Effects" : ["Nature2_Small"],
+            "BuildingKey": "Small_Park",
+            "ResourceName" : "park.png"
+        },
+        {
+            "Name" : "Volkshochschule",
+            "Cost" : 200,
+            "Effects" : ["Education2_Wide", "Culture2_Wide"],
+            "BuildingKey" : "VHS",
+            "ResourceName" : "library.png"
+        }
+]

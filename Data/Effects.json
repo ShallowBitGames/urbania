@@ -1,0 +1,34 @@
+{
+    "Effects" : {
+        "Social2_Wide" : {
+            "Type" : "StatIncreaseLocal",
+            "Stat" : "Social",
+            "Amount" : 2,
+            "Radius" : 50
+        },
+        "Economy1_Full" : {
+            "Type" : "StatIncreaseGlobal",
+            "Stat" : "Economy",
+            "Amount" : 1,
+            "Radius" : -1
+        },
+        "Culture2_Wide" : {
+            "Type" : "StatIncreaseLocal",
+            "Stat" : "Culture",
+            "Amount" : 2,
+            "Radius" : 50 
+        },
+        "Nature2_Small" : {
+            "Type" : "StatIncreaseLocal",
+            "Stat" : "Nature",
+            "Amount" : 2,
+            "Radius" : 5
+        },
+        "Education2_Wide" : {
+            "Type" : "StatIncreaseLocal",
+            "Stat" : "Education",
+            "Amount" : 2,
+            "Radius" : 50
+        }
+    }
+}

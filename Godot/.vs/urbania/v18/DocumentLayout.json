@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\user\\Documents\\GitHub\\urbaniarepo\\Godot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BA7EFB9-0123-4FB6-B716-618B23991F31}|urbania.csproj|c:\\users\\user\\documents\\github\\urbaniarepo\\godot\\hand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BA7EFB9-0123-4FB6-B716-618B23991F31}|urbania.csproj|solutionrelative:hand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}|..\\Core\\UrbaniaCore\\UrbaniaCore.csproj|c:\\users\\user\\documents\\github\\urbaniarepo\\core\\urbaniacore\\card.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}|..\\Core\\UrbaniaCore\\UrbaniaCore.csproj|c:\\users\\user\\documents\\github\\urbaniarepo\\core\\urbaniacore\\effect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Effect.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\urbaniarepo\\Core\\UrbaniaCore\\Effect.cs",
+              "RelativeDocumentMoniker": "..\\Core\\UrbaniaCore\\Effect.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\urbaniarepo\\Core\\UrbaniaCore\\Effect.cs",
+              "RelativeToolTip": "..\\Core\\UrbaniaCore\\Effect.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T21:39:01.13Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Card.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\urbaniarepo\\Core\\UrbaniaCore\\Card.cs",
+              "RelativeDocumentMoniker": "..\\Core\\UrbaniaCore\\Card.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\urbaniarepo\\Core\\UrbaniaCore\\Card.cs",
+              "RelativeToolTip": "..\\Core\\UrbaniaCore\\Card.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T21:36:28.961Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Hand.cs",
+              "DocumentMoniker": "C:\\Users\\user\\Documents\\GitHub\\urbaniarepo\\Godot\\Hand.cs",
+              "RelativeDocumentMoniker": "Hand.cs",
+              "ToolTip": "C:\\Users\\user\\Documents\\GitHub\\urbaniarepo\\Godot\\Hand.cs",
+              "RelativeToolTip": "Hand.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T21:36:04.038Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

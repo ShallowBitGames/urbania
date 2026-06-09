@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CardData" format=3 uid="uid://bk8q4g6r16vsd"]
+
+[ext_resource type="Script" uid="uid://ceseqcf3uefrd" path="res://resources/cardData.gd" id="1_iark7"]
+
+[resource]
+script = ExtResource("1_iark7")
+name = "Clinic"
+radius = 5
+qol = 5.0
+sprite_path = "res://test-pngs/testcard-clinic.png"

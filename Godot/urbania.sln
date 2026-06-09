@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11520.95 d18.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "urbania", "urbania.csproj", "{3BA7EFB9-0123-4FB6-B716-618B23991F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UrbaniaCore", "..\Core\UrbaniaCore\UrbaniaCore.csproj", "{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		ExportDebug|Any CPU = ExportDebug|Any CPU
+		ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3BA7EFB9-0123-4FB6-B716-618B23991F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA7EFB9-0123-4FB6-B716-618B23991F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA7EFB9-0123-4FB6-B716-618B23991F31}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{3BA7EFB9-0123-4FB6-B716-618B23991F31}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{3BA7EFB9-0123-4FB6-B716-618B23991F31}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{3BA7EFB9-0123-4FB6-B716-618B23991F31}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+		{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}.ExportDebug|Any CPU.ActiveCfg = Release|Any CPU
+		{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}.ExportDebug|Any CPU.Build.0 = Release|Any CPU
+		{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}.ExportRelease|Any CPU.ActiveCfg = Release|Any CPU
+		{D246249C-3812-2838-F0BA-5C0DBFC5A9D0}.ExportRelease|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {163D0B93-4E7D-4C66-9D90-6080D45D8177}
+	EndGlobalSection
+EndGlobal

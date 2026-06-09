@@ -1,0 +1,12 @@
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\bin\Debug\net10.0\UrbaniaCore.deps.json
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\bin\Debug\net10.0\UrbaniaCore.dll
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\bin\Debug\net10.0\UrbaniaCore.pdb
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\UrbaniaCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\UrbaniaCore.AssemblyInfoInputs.cache
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\UrbaniaCore.AssemblyInfo.cs
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\UrbaniaCore.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\UrbaniaCore.sourcelink.json
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\UrbaniaCore.dll
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\refint\UrbaniaCore.dll
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\UrbaniaCore.pdb
+C:\Users\user\Documents\GitHub\urbaniarepo\Core\UrbaniaCore\obj\Debug\net10.0\ref\UrbaniaCore.dll
